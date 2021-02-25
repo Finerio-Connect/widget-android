@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    tools:context=".component.AccountActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/main_background"
+            tools:context=".component.AccountActivity"
+            tools:ignore="UselessParent">
+            <TextView
+                android:text="@string/banks_title"
+                android:gravity="center"
+                style="@style/styleH2"
+                android:background="@color/main_background"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+            <ProgressBar
+                android:id="@+id/progressBarBanks"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBanks"
+                android:scrollbars="none"
+                android:layout_marginTop="28dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:gravity="center_horizontal"
+                android:layout_gravity="center"
+                android:layout_marginTop="37dp"
+                style="@style/styleBodyAnalysis"
+                android:text="@string/text_analysis"
+                android:layout_width="256dp"
+                android:layout_height="25dp" />
+            <TextView
+                android:text="@string/text_tv_shape_special"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="11dp"
+                style="@style/styleBodyShapeSpecial"
+                android:background="@drawable/ic_shape_special"
+                android:layout_marginBottom="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

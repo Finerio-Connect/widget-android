@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    tools:context=".component.AccountActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/titleBack"
+            android:text="@string/back_to_banks_label"
+            android:gravity="left|center"
+            android:drawableStart="@drawable/ic_arrow_back"
+            android:drawableLeft="@drawable/ic_arrow_back"
+            android:padding="10dp"
+            style="@style/styleH3"
+            android:background="@color/main_background"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            tools:ignore="RtlHardcoded,UseCompatTextViewDrawableXml" />
+        <LinearLayout
+            android:layout_below="@+id/titleBack"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="42dp"
+            android:layout_marginRight="42dp"
+            android:background="@color/main_background"
+            tools:context=".component.AccountActivity"
+            tools:ignore="UselessParent">
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieAnimationAccountStatus"
+                android:indeterminateOnly="true"
+                app:lottie_autoPlay="true"
+                app:lottie_url="@string/url_lottie_syncing_success"
+                android:layout_marginTop="85dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp" />
+            <TextView
+                android:layout_marginTop="31dp"
+                android:text="@string/text_bonding_success"
+                style="@style/styleH1"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="23dp"
+                android:text="@string/text_account_update"
+                style="@style/styleH3Bold"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btnBondingAccount"
+                android:layout_marginTop="170dp"
+                android:text="@string/text_bonding_account"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/shape_green"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btnBondingCancel"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="77dp"
+                android:text="@string/text_btn_cancel"
+                android:textColor="@color/main_color"
+                android:background="@drawable/bg_btn_white_with_border_green"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

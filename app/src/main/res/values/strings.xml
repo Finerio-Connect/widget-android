@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Account</string>
+    <string name="text_btn_add_accounts">Ir a agregacion de cuentas</string>
+</resources>

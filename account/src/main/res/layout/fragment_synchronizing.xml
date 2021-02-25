@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    tools:context=".component.AccountActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/titleBack"
+            android:text="@string/back_to_banks_label"
+            android:gravity="left|center"
+            android:drawableStart="@drawable/ic_arrow_back"
+            android:drawableLeft="@drawable/ic_arrow_back"
+            android:padding="10dp"
+            style="@style/styleH3"
+            android:background="@color/main_background"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            tools:ignore="RtlHardcoded,UseCompatTextViewDrawableXml" />
+        <LinearLayout
+            android:layout_below="@+id/titleBack"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="42dp"
+            android:layout_marginRight="42dp"
+            android:background="@color/main_background"
+            tools:context=".component.AccountActivity"
+            tools:ignore="UselessParent">
+            <TextView
+                android:text="@string/synchronization_title"
+                style="@style/styleH3Medium"
+                android:textColor="@color/main_text_color"
+                android:gravity="center"
+                android:layout_marginTop="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieAnimationAccountStatus"
+                android:indeterminateOnly="true"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_url="@string/url_lottie_syncing_loop"
+                android:layout_marginTop="25dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAccount"
+                android:layout_marginTop="31dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btnSynCancel"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="77dp"
+                android:text="@string/text_btn_cancel"
+                android:visibility="invisible"
+                android:textColor="@color/main_color"
+                android:background="@drawable/bg_btn_white_with_border_green"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

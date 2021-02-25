@@ -1,0 +1,91 @@
+{
+  "project_info": {
+    "project_number": "864285526097",
+    "firebase_url": "https://finerio-android.firebaseio.com",
+    "project_id": "finerio-android",
+    "storage_bucket": "finerio-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:864285526097:android:0e50f4df39efd474549070",
+        "android_client_info": {
+          "package_name": "com.finerioconnect.widget"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "864285526097-6shsudjedbar92snj272ajbjh0k3a5hf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9xwCzkA_V4zKPXtMSAMIMOkOW2l3tP7I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "864285526097-6shsudjedbar92snj272ajbjh0k3a5hf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "864285526097-36t8ae1huorqltu83hsg176mf65n8hb7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "mx.finerio.ios"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:864285526097:android:81d3dd7f512b4867",
+        "android_client_info": {
+          "package_name": "mx.finerio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "864285526097-o2s783ufp6jnj6bm28p4ed6tk1gcgpg0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mx.finerio",
+            "certificate_hash": "3513b1965f463604b414cf0b17e293dde6dfe9f5"
+          }
+        },
+        {
+          "client_id": "864285526097-6shsudjedbar92snj272ajbjh0k3a5hf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9xwCzkA_V4zKPXtMSAMIMOkOW2l3tP7I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "864285526097-6shsudjedbar92snj272ajbjh0k3a5hf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "864285526097-36t8ae1huorqltu83hsg176mf65n8hb7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "mx.finerio.ios"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

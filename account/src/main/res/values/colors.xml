@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#283255</color>
+    <color name="colorPrimaryDark">#283255</color>
+    <color name="colorAccent">#33D9B2</color>
+
+    <color name="colorBackground">#F5F5F5</color>
+    <color name="colorAccount">#33D9B2</color>
+    <color name="colorTextBody">#5D688C</color>
+    <color name="colorTextBodySmall">#B0B6C7</color>
+    <color name="colorTextTitle">#283255</color>
+    <color name="colorTextH2">#33D9B2</color>
+    <color name="colorInputError">#F75757</color>
+
+    <color name="black">#000000</color>
+    <color name="colorGray">#ff939598</color>
+    <color name="colorWhite">#ffffffff</color>
+    <color name="colorLightGray">#d3d3d3</color>
+    <color name="colorDarkBlue">#ff0084DD</color>
+    <color name="colorLightBlue">#ffE5F3FD</color>
+    <color name="colorTransactionCharge">#FF5722</color>
+    <color name="colorTransactionDeposit">#ff2ECC71</color>
+
+    <color name="manual_account_icon">#0A5D19</color>
+    <color name="transactionDuplicated">#ffDCDCDC</color>
+
+    <!-- Custom Color Customer -->
+    <color name="main_color">#33D9B2</color>
+    <color name="main_background">#F5F5F5</color>
+    <color name="main_text_color">#33D9B2</color>
+    <color name="terms_text_color">#5D688C</color>
+
+</resources>
