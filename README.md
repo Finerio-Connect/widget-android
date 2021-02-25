@@ -4,7 +4,7 @@ Este es un repositorio de [Finerio](https://finerio.mx/) en donde se exponen los
 
 ## Download
 
-You can download a aar or jar from [releases](https://finerio.mx/releases).
+You can download SDK.
 ```bash
 dependencies {
     implementation 'com.github.Finerio-Connect:widget-android:1.0'
