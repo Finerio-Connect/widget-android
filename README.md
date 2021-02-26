@@ -5,6 +5,9 @@ Este es un repositorio de [Finerio](https://finerio.mx/) en donde se exponen los
 ## Download
 
 You can download SDK.
+
+[![](https://jitpack.io/v/Finerio-Connect/widget-android.svg)](https://jitpack.io/#Finerio-Connect/widget-android)
+
 ```bash
 dependencies {
     implementation 'com.github.Finerio-Connect:widget-android:1.0'
