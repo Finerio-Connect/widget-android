@@ -20,12 +20,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         accountWidget = new AccountWidget();
-        accountWidget.setCompanyName("Nubank");
-        accountWidget.setWidgetId("pparKeszQYwBF64A8WsWab5VDnVdE8QDnVCp2pgVubJRxyNU46");
-        accountWidget.setCustomerId(null);
-        accountWidget.setCustomerName("Hugo Islas");
+        accountWidget.setCompanyName("your_company");
+        accountWidget.setWidgetId("your_widget_id");
+        accountWidget.setCustomerId("customer_id");
+        accountWidget.setCustomerName("customer_name");
         accountWidget.setAutomaticFetching(true);
-        accountWidget.setState("stateEncrypted");
+        accountWidget.setState("your_state");
 
         Button btnAccountView = findViewById(R.id.btnAccountView);
         btnAccountView.setOnClickListener(new View.OnClickListener() {
