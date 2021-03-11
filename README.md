@@ -109,4 +109,4 @@ Android Manifest - XML
 ```
 
 ## License
-[Finerio SDK](https://finerio.mx/license)
+[Finerio SDK](https://devs.finerioconnect.com/)
