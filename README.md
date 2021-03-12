@@ -1,6 +1,6 @@
 # SDK - Widgets
 
-Este es un repositorio de [Finerio](https://finerio.mx/) en donde se exponen los widgets de nuestra app.
+This is a repository of [Finerio](https://finerio.mx/)
 
 ## Download
 
@@ -11,10 +11,10 @@ You can download SDK.
 ```bash
 
 allprojects {
-	repositories {
-		...
-		maven { url 'https://jitpack.io' }
-	}
+  repositories {
+  ...
+  maven { url 'https://jitpack.io' }
+  }
 }
 
 ...
@@ -25,9 +25,9 @@ dependencies {
 
 ```
 
-## ¿Cómo uso Cuenta Widget?
+## ¿ How To Use SDK ?
 
-Código Java
+Java Code
 ```java
 
     AccountWidget accountWidget = new AccountWidget();
@@ -48,7 +48,7 @@ Código Java
         }
     });
 ```
-Layout - XML
+activity_main.xml
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -74,7 +74,7 @@ Layout - XML
 
 Android Manifest - XML
 ```xml
-	<activity android:name="com.finerioconnect.widget.component.AccountActivity" />
+<activity android:name="com.finerioconnect.widget.component.AccountActivity" />
 ```
 
 ## 🎨 Color Customization
