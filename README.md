@@ -9,9 +9,20 @@ You can download SDK.
 [![](https://jitpack.io/v/Finerio-Connect/widget-android.svg)](https://jitpack.io/#Finerio-Connect/widget-android)
 
 ```bash
+
+allprojects {
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
+	}
+}
+
+...
+
 dependencies {
     implementation 'com.github.Finerio-Connect:widget-android:1.0'
 }
+
 ```
 
 ## ¿Cómo uso Cuenta Widget?
@@ -109,4 +120,4 @@ Android Manifest - XML
 ```
 
 ## License
-[Finerio SDK](https://devs.finerioconnect.com/)
+[Finerio SDK](https://finerio.mx/license)
