@@ -74,7 +74,9 @@ activity_main.xml
 
 Android Manifest - XML
 ```xml
-<activity android:name="com.finerioconnect.widget.component.AccountActivity" />
+<activity
+    android:name="com.finerioconnect.widget.component.AccountActivity"
+/>
 ```
 
 ## 🎨 Color Customization
