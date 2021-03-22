@@ -10,9 +10,12 @@ public class AccountWidget implements Serializable {
 
     //Optional attributes
     private String companyName;
-    private String customerId;
+    private Long customerId;
     private Boolean automaticFetching;
     private String state;
+
+    //url default Finerio Sandbox
+    private String urlServer;
 
     //Colors and fonts
     private String mainColor;
@@ -53,11 +56,11 @@ public class AccountWidget implements Serializable {
         this.widgetId = widgetId;
     }
 
-    public String getCustomerId() {
+    public Long getCustomerId() {
         return customerId;
     }
 
-    public void setCustomerId(String customerId) {
+    public void setCustomerId(Long customerId) {
         this.customerId = customerId;
     }
 
@@ -83,6 +86,14 @@ public class AccountWidget implements Serializable {
 
     public void setState(String state) {
         this.state = state;
+    }
+
+    public String getUrlServer() {
+        return urlServer;
+    }
+
+    public void setUrlServer(String urlServer) {
+        this.urlServer = urlServer;
     }
 
     public String getMainColor() {

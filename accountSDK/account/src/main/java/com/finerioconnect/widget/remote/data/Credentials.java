@@ -10,7 +10,7 @@ public class Credentials {
     private String widgetId;
     @SerializedName("customerId")
     @Expose
-    private String customerId;
+    private Long customerId;
     @SerializedName("customerName")
     @Expose
     private String customerName;
@@ -41,11 +41,11 @@ public class Credentials {
         this.widgetId = widgetId;
     }
 
-    public String getCustomerId() {
+    public Long getCustomerId() {
         return customerId;
     }
 
-    public void setCustomerId(String customerId) {
+    public void setCustomerId(Long customerId) {
         this.customerId = customerId;
     }
 
