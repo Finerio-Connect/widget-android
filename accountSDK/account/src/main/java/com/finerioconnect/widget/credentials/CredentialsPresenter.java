@@ -4,6 +4,7 @@ import android.content.Context;
 import android.util.Base64;
 import android.util.Log;
 
+import com.finerioconnect.widget.remote.data.ResponseFinerioCredentialsErrors;
 import com.google.gson.Gson;
 
 import org.bouncycastle.asn1.x509.SubjectPublicKeyInfo;
@@ -70,9 +71,10 @@ public class CredentialsPresenter implements ImplCredentialsPresenter {
                     mImplCredentialsView.showFinerioCredentials(response.body());
                 }else{
                     try {
-                        ResponseFinerioCredentials credentialsError =
+                        ResponseFinerioCredentialsErrors credentialsError =
                                 new Gson().fromJson(Objects.requireNonNull(response.errorBody()).string(),
-                                        ResponseFinerioCredentials.class);
+                                        ResponseFinerioCredentialsErrors.class);
+
                         onFailure(call, new Throwable(credentialsError.toString()));
                     } catch (IOException e) {
                         onFailure(call, new Throwable(mContext.getString(R.string.text_error_server)));

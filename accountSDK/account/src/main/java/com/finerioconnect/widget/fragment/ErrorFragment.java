@@ -59,7 +59,7 @@ public class ErrorFragment extends AbstractFragment implements View.OnClickListe
     public void onClick(View view) {
         int id = view.getId();
         if (id == R.id.btnTryAgain) {
-            mImplFragmentTransaction.setFragmentTransaction(EventFragment.Bonding, null);
+            mImplFragmentTransaction.setFragmentTransaction(EventFragment.Bank, null);
         } else if (id == R.id.btnErrorCancel) {
             mImplFragmentTransaction.setFragmentTransaction(EventFragment.Welcome, null);
         } else if (id == R.id.titleBack) {

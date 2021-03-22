@@ -21,9 +21,6 @@ public class ResponseFinerioCredentials {
     @SerializedName("automaticFetching")
     @Expose
     private Boolean automaticFetching;
-    //@SerializedName("dateCreated")
-    //@Expose
-    //private Long dateCreated;
 
     public String getId() {
         return id;
@@ -55,32 +52,6 @@ public class ResponseFinerioCredentials {
 
     public void setAutomaticFetching(Boolean automaticFetching) {
         this.automaticFetching = automaticFetching;
-    }
-
-    /*public Long getDateCreated() {
-        return dateCreated;
-    }
-
-    public void setDateCreated(Long dateCreated) {
-        this.dateCreated = dateCreated;
-    }*/
-    
-    @SerializedName("errors")
-    @Expose
-    private List<Error> errors = null;
-
-    public List<Error> getErrors() {
-        return errors;
-    }
-
-    public void setErrors(List<Error> errors) {
-        this.errors = errors;
-    }
-
-    @NotNull
-    @Override
-    public String toString() {
-        return "Errors:\n " + errors;
     }
 
 }
