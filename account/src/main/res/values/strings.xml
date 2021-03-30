@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Widget Finerio</string>
+    <string name="text_btn_add_accounts">Open SDK Account Aggregation</string>
+    <string name="text_p_account">
+        Nos gustaría realizar un análisis de tus movimientos para poder conocer tu perfil y ofrecerte mejores productos.
+        \n\nPara ello, deberemos realizar una vinculación con la banca en línea de tu banco. Esto sin solicitar contraseñas
+        que comprometan tu cuenta, únicamente tus datos de acceso.</string>
+    <string name="text_analysis">Análisis en <b>modo lectura</b> sin acceso a tu cuenta ni tu dinero</string>
+    <string name="text_tv_h2">¡Hola %s!</string>
+    <string name="text_tv_title_customer">En %s queremos ofrecerte un mejor servicio.</string>
+    <string name="text_btn_continue">CONTINUAR</string>
+    <string name="text_tv_shape_special">Tu información está 100% segura y no es compartida con nadie más.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_tv_title_bank">Selecciona tu banco:</string>
+    <string name="hint_text_password">Contraseña</string>
+    <string name="hint_text_email">Correo Electrónico</string>
+    <string name="hint_text_email_sample">email_email@email.com</string>
+    <string name="text_tv_back_bank">Volver a Bancos</string>
+    <string name="text_tv_label_email">Número de cliente</string>
+    <string name="text_tv_label_error">Texto Invalido</string>
+    <string name="text_tv_label_password">Clave de BancaNet</string>
+    <string name="text_tv_p_credentials">Al dar clic en Enviar información aceptas expresamente nuestros Términos de servicio así como nuestro Aviso de privacidad.</string>
+    <string name="text_btn_info">Intentar de nuevo</string>
+    <string name="text_btn_send_info">Enviar información</string>
+    <string name="text_tv_add_account">Agregando Cuentas</string>
+    <string name="text_btn_cancel">Cancelar</string>
+    <string name="text_tv_p_error">Hubo un problema de conexión con tu banco. No has activado tu banca en línea o se requiere que hagas alguna configuración extra.</string>
+    <string name="text_bonding_success">¡Vinculación exitosa!</string>
+    <string name="text_account_update">Tu cuenta se analizó correctamente</string>
+    <string name="text_bonding_account">Vincular otra cuenta</string>
+    <string name="text_number_account_label">No. de cuenta</string>
+    <string name="text_number_account">( ** *** *** 099 )</string>
+    <string name="text_error_server">Ha ocurrido un error en el servidor</string>
+    <string name="text_title_app">Vincula tu entidad bancaria</string>
+    <string name="text_meta_data_credentials">Estos datos NO nos dan autorización a acceder ni hacer uso de tu dinero.</string>
+    <string name="text_meta_data_credentials_info"><u>¿Donde encuentro estas claves?</u></string>
+    <string name="text_title_meta_data_credentials">Introduce los datos con los que accedes a la banca en línea web de %s.</string>
+    <string name="text_title_widget">Vincula tu entidad bancaria</string>
+    <string name="text_dialog_title_token_request">Solicitud de Token</string>
+
+    <string name="terms_and_conditions">terms_and_conditions</string>
+    <string name="privacy_policy">privacy_policy</string>
+    <string name="message">message lorem</string>
+
+    <!-- Custom Lottie Url Customer -->
+    <string name="url_lottie_account_loading">https://cdn.finerio.mx/widget/account_loading.json</string>
+    <string name="url_lottie_account_ready">https://cdn.finerio.mx/widget/account_ready.json</string>
+    <string name="url_lottie_syncing_loop">https://cdn.finerio.mx/widget/syncing_loop.json</string>
+    <string name="url_lottie_syncing_success">https://cdn.finerio.mx/widget/syncing_success.json</string>
+    <string name="url_lottie_syncing_failure">https://cdn.finerio.mx/widget/syncing_failure.json</string>
+
+    <!-- Custom String Customer -->
+    <string name="banks_title">Selecciona tu banco:</string>
+    <string name="create_credential_title">Introduce los datos con los que accedes a la banca en línea web de %s.</string>
+    <string name="back_to_banks_label">Volver a Bancos</string>
+    <string name="submit_label">Enviar información</string>
+    <string name="privacy_terms_url">https://finerio.mx/privacy</string>
+    <string name="terms_and_conditions_url">https://finerio.mx/terms</string>
+    <string name="synchronization_title">Agregando Cuentas</string>
+    <string name="text_terms_privacy">Al dar clic en Enviar información aceptas expresamente nuestros Términos de servicio así como nuestro Aviso de privacidad.</string>
+    <string name="text_tv_title_info">Sigue las instrucciones</string>
+
+</resources>
