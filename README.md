@@ -31,12 +31,16 @@ Java Code
 ```java
 
     AccountWidget accountWidget = new AccountWidget();
+    // Required attributes
     accountWidget.setCompanyName("your_company");
     accountWidget.setWidgetId("your_widget_id");
-    accountWidget.setCustomerId("customer_id");
+    //Optional attributes
+    //accountWidget.setCustomerId(875L);
     accountWidget.setCustomerName("customer_name");
     accountWidget.setAutomaticFetching(true);
     accountWidget.setState("your_state");
+    //url default Finerio Sandbox
+    accountWidget.setUrlServer("url_production");
 
     Button btnAccountView = findViewById(R.id.btnAccountView);
     btnAccountView.setOnClickListener(new View.OnClickListener() {
