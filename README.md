@@ -20,7 +20,7 @@ allprojects {
 ...
 
 dependencies {
-    implementation 'com.github.Finerio-Connect:widget-android:1.0'
+    implementation 'com.github.Finerio-Connect:widget-android:Tag'
 }
 
 ```
