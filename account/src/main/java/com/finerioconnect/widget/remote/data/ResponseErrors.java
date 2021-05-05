@@ -7,7 +7,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class ResponseFinerioCredentialsErrors {
+public class ResponseErrors {
 
     @SerializedName("status")
     @Expose

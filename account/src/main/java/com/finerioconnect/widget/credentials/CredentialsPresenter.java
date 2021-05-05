@@ -4,9 +4,9 @@ import android.content.Context;
 import android.util.Base64;
 import android.util.Log;
 
-import com.finerioconnect.widget.remote.data.ResponseFinerioCredentialsErrors;
+import com.finerioconnect.widget.remote.data.Error;
+import com.finerioconnect.widget.remote.data.ResponseErrors;
 import com.google.gson.Gson;
-
 import org.bouncycastle.asn1.x509.SubjectPublicKeyInfo;
 import org.bouncycastle.openssl.PEMParser;
 import org.bouncycastle.openssl.jcajce.JcaPEMKeyConverter;
@@ -71,11 +71,17 @@ public class CredentialsPresenter implements ImplCredentialsPresenter {
                     mImplCredentialsView.showFinerioCredentials(response.body());
                 }else{
                     try {
-                        ResponseFinerioCredentialsErrors credentialsError =
+                        ResponseErrors credentialsError =
                                 new Gson().fromJson(Objects.requireNonNull(response.errorBody()).string(),
-                                        ResponseFinerioCredentialsErrors.class);
+                                        ResponseErrors.class);
 
-                        onFailure(call, new Throwable(credentialsError.toString()));
+                        StringBuilder errorMessage = new StringBuilder();
+
+                        for ( Error error:  credentialsError.getErrors() ){
+                            errorMessage.append(validateErrorCode(error.getCode())).append("\n");
+                        }
+
+                        onFailure(call, new Throwable(errorMessage.toString()));
                     } catch (IOException e) {
                         onFailure(call, new Throwable(mContext.getString(R.string.text_error_server)));
                     }
@@ -130,6 +136,19 @@ public class CredentialsPresenter implements ImplCredentialsPresenter {
         } catch ( Exception e ) {
             e.printStackTrace();
             return "";
+        }
+    }
+
+    private String validateErrorCode(String code){
+        switch (code){
+            case "CconstraintViolationList.rfc.message":
+                return mContext.getString(R.string.constraintViolationList_rfc_message);
+            case "ConstraintViolationList.password.message":
+                return mContext.getString(R.string.constraintViolationList_password_message);
+            case "customer.not.found":
+                return mContext.getString(R.string.customer_not_found);
+            default:
+                return mContext.getString(R.string.error_not_found);
         }
     }
 

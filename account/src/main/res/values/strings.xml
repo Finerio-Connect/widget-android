@@ -61,4 +61,11 @@
     <string name="text_terms_privacy">Al dar clic en Enviar información aceptas expresamente nuestros Términos de servicio así como nuestro Aviso de privacidad.</string>
     <string name="text_tv_title_info">Sigue las instrucciones</string>
 
+    <!-- Error String Message -->
+    <string name="error_not_found">Error en el servidor, favor de intentar mas tarde</string>
+    <string name="constraintViolationList_rfc_message">El RFC que escribiste es incorrecto</string>
+    <string name="constraintViolationList_password_message">La contraseña que escribiste es incorrecta</string>
+    <string name="customer_not_found">ID de cliente no encontrado</string>
+
+
 </resources>
