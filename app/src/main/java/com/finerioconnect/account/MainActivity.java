@@ -18,16 +18,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         AccountWidget accountWidget = new AccountWidget();
+
         // Required attributes
         accountWidget.setCompanyName("your_company");
-        accountWidget.setWidgetId("your_widget_id");
-        //Optional attributes
-        //accountWidget.setCustomerId(875L);
-        accountWidget.setCustomerName("customer_name");
-        accountWidget.setAutomaticFetching(true);
-        accountWidget.setState("your_state");
-        //url default Finerio Sandbox
-        accountWidget.setUrlServer("url_production");
+        accountWidget.setWidgetId("Your_widget_idd");
+        accountWidget.setCustomerName( "your_customer_name" );
 
         Button btnAccountView = findViewById(R.id.btnAccountView);
         btnAccountView.setOnClickListener(view -> {
