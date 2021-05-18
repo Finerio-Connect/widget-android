@@ -61,7 +61,7 @@ public class ErrorFragment extends AbstractFragment implements View.OnClickListe
         if (id == R.id.btnTryAgain) {
             mImplFragmentTransaction.setFragmentTransaction(EventFragment.Bank, null);
         } else if (id == R.id.btnErrorCancel) {
-            mImplFragmentTransaction.setFragmentTransaction(EventFragment.Welcome, null);
+            mImplFragmentTransaction.setFragmentTransaction(EventFragment.Bank, null);
         } else if (id == R.id.titleBack) {
             mImplFragmentTransaction.setFragmentTransaction(EventFragment.Bank, null);
         }

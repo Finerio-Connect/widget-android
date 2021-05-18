@@ -62,7 +62,7 @@ public class BondingFragment extends AbstractFragment implements View.OnClickLis
         }else if (id == R.id.btnBondingAccount){
             mImplFragmentTransaction.setFragmentTransaction(EventFragment.Bank, null);
         } else if (id == R.id.btnBondingCancel){
-            mImplFragmentTransaction.setFragmentTransaction(EventFragment.Welcome, null);
+            mImplFragmentTransaction.setFragmentTransaction(EventFragment.Bank, null);
         }
     }
 

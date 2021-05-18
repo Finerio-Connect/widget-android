@@ -22,7 +22,6 @@ import com.finerioconnect.widget.utils.FragmentControllerDelegate;
 
 public class AccountActivity extends BaseActivityFragment implements ImplFragmentTransaction {
 
-    private WelcomeFragment mWelcomeFragment;
     private BankFragment mBankFragment;
     private CredentialsFragment mCredentialsFragment;
 
@@ -37,7 +36,7 @@ public class AccountActivity extends BaseActivityFragment implements ImplFragmen
         FirebaseApp.initializeApp(this);
         AccountWidget accountWidget = (AccountWidget) getIntent().getSerializableExtra("AccountWidget");
         Singleton.getInstance().setAccountWidget(accountWidget);
-        loadFragment(mWelcomeFragment, FragmentControllerDelegate.TRANSITION.FADE);
+        loadFragment(mBankFragment, FragmentControllerDelegate.TRANSITION.FADE);
     }
 
     @Override
@@ -47,7 +46,6 @@ public class AccountActivity extends BaseActivityFragment implements ImplFragmen
 
     @Override
     protected void initPersistFragments() {
-        mWelcomeFragment = WelcomeFragment.newInstance(this);
         mBankFragment = new BankFragment(this);
         mBondingFragment = new BondingFragment(this);
     }
@@ -55,10 +53,8 @@ public class AccountActivity extends BaseActivityFragment implements ImplFragmen
     @Override
     public void onBackPressed() {
         AbstractFragment currentFragment = getCurrentFragment();
-        if (currentFragment instanceof WelcomeFragment){
+        if (currentFragment instanceof BankFragment){
             super.onBackPressed();
-        }else if (currentFragment instanceof BankFragment){
-            loadFragment(mWelcomeFragment, FragmentControllerDelegate.TRANSITION.BACK);
         }else if (currentFragment instanceof CredentialsFragment){
             loadFragment(mBankFragment, FragmentControllerDelegate.TRANSITION.BACK);
         }else if (currentFragment instanceof BondingFragment){
@@ -82,9 +78,6 @@ public class AccountActivity extends BaseActivityFragment implements ImplFragmen
         }
 
         switch (eventFragment){
-            case Welcome:
-                loadFragment(mWelcomeFragment);
-                break;
             case Bank:
                 loadFragment(mBankFragment);
                 break;
