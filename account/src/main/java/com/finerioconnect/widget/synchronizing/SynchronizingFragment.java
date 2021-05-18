@@ -103,7 +103,7 @@ public class SynchronizingFragment extends AbstractFragment implements View.OnCl
         if (id == R.id.titleBack){
             mImplFragmentTransaction.setFragmentTransaction(EventFragment.Bank, null);
         }else if (id == R.id.btnSynCancel){
-            mImplFragmentTransaction.setFragmentTransaction(EventFragment.Welcome, null);
+            mImplFragmentTransaction.setFragmentTransaction(EventFragment.Bank, null);
         }
     }
 
