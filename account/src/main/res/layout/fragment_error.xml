@@ -17,6 +17,7 @@
             android:drawableStart="@drawable/ic_arrow_back"
             android:drawableLeft="@drawable/ic_arrow_back"
             android:padding="10dp"
+            android:visibility="gone"
             style="@style/styleH3"
             android:background="@color/main_background"
             android:layout_width="match_parent"
