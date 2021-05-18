@@ -38,7 +38,7 @@ public class BankPresenter implements ImplBankPresenter {
                     List<Bank> bankList = new ArrayList<>();
 
                     for (Bank bank: response.body().getData()) {
-                        if (bank.getStatus().equals("ACTIVE") && bank.getStatus().equals("PARTIALLY_ACTIVE")){
+                        if (bank.getStatus().equals("ACTIVE") || bank.getStatus().equals("PARTIALLY_ACTIVE")){
                             bankList.add(bank);
                         }
                     }

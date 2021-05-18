@@ -47,6 +47,7 @@ public class FieldsAdapter extends RecyclerView.Adapter<FieldsAdapter.ViewHolder
         holder.editTextValue.setHint(mField.getFriendlyName());
 
         if (mField.getType().equals("PASSWORD")){
+            holder.layoutTextInput.setPasswordVisibilityToggleEnabled(true);
             holder.layoutTextInput.setEndIconMode(TextInputLayout.END_ICON_PASSWORD_TOGGLE);
             holder.layoutTextInput.setEndIconDrawable(R.drawable.show_and_hide_password);
         }
