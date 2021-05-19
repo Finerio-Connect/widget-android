@@ -80,18 +80,23 @@ public class AccountActivity extends BaseActivityFragment implements ImplFragmen
         switch (eventFragment){
             case Bank:
                 loadFragment(mBankFragment);
+                setTitle("Bancos");
                 break;
             case Credentials:
                 loadFragment(mCredentialsFragment);
+                setTitle("Credencial ");
                 break;
             case Bonding:
                 loadFragment(mBondingFragment);
+                setTitle("Mensage de Éxito");
                 break;
             case Error:
                 loadFragment(mErrorFragment);
+                setTitle("Mensage de Error");
                 break;
             case Synchronizing:
                 loadFragment(mSynchronizingFragment);
+                setTitle("Sincronización");
                 break;
         }
     }
