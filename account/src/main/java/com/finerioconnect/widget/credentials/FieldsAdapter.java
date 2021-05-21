@@ -12,14 +12,13 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.finerioconnect.widget.R;
+import com.finerioconnect.widget.remote.data.Field;
 import com.google.android.material.textfield.TextInputLayout;
 
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
-
-import com.finerioconnect.widget.R;
-import com.finerioconnect.widget.remote.data.Field;
 
 public class FieldsAdapter extends RecyclerView.Adapter<FieldsAdapter.ViewHolder> {
 

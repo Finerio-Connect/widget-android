@@ -2,11 +2,6 @@ package com.finerioconnect.widget.bank;
 
 import android.content.Context;
 
-import org.jetbrains.annotations.NotNull;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import com.finerioconnect.widget.R;
 import com.finerioconnect.widget.remote.ApiClient;
 import com.finerioconnect.widget.remote.ApiService;
@@ -14,6 +9,11 @@ import com.finerioconnect.widget.remote.ServiceUrl;
 import com.finerioconnect.widget.remote.data.Bank;
 import com.finerioconnect.widget.remote.data.BanksMagicLink;
 import com.finerioconnect.widget.utils.SessionWidget;
+
+import org.jetbrains.annotations.NotNull;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;

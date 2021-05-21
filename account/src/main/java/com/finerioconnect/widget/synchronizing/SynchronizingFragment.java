@@ -16,6 +16,16 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.finerioconnect.widget.R;
+import com.finerioconnect.widget.fragment.ImplFragmentTransaction;
+import com.finerioconnect.widget.model.Singleton;
+import com.finerioconnect.widget.remote.RemoteConstants;
+import com.finerioconnect.widget.remote.data.Account;
+import com.finerioconnect.widget.remote.data.ItemDataBase;
+import com.finerioconnect.widget.remote.data.UserToken;
+import com.finerioconnect.widget.utils.AbstractFragment;
+import com.finerioconnect.widget.utils.EventFragment;
+import com.finerioconnect.widget.utils.ImplGenericResult;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -28,17 +38,6 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
-import com.finerioconnect.widget.R;
-import com.finerioconnect.widget.fragment.ImplFragmentTransaction;
-import com.finerioconnect.widget.model.Singleton;
-import com.finerioconnect.widget.remote.RemoteConstants;
-import com.finerioconnect.widget.remote.data.Account;
-import com.finerioconnect.widget.remote.data.ItemDataBase;
-import com.finerioconnect.widget.remote.data.UserToken;
-import com.finerioconnect.widget.utils.AbstractFragment;
-import com.finerioconnect.widget.utils.EventFragment;
-import com.finerioconnect.widget.utils.ImplGenericResult;
 
 public class SynchronizingFragment extends AbstractFragment implements View.OnClickListener, ImplGenericResult {
 

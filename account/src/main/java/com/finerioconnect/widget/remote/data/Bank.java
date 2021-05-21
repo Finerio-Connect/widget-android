@@ -1,11 +1,8 @@
 package com.finerioconnect.widget.remote.data;
 
+import com.finerioconnect.widget.remote.RemoteConstants;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-
-import com.finerioconnect.widget.remote.RemoteConstants;
-
-import java.util.List;
 
 public class Bank {
 

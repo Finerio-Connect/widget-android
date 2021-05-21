@@ -10,22 +10,12 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.bumptech.glide.Glide;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import org.jetbrains.annotations.NotNull;
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Objects;
 import com.finerioconnect.widget.R;
 import com.finerioconnect.widget.fragment.ImplFragmentTransaction;
 import com.finerioconnect.widget.remote.RemoteConstants;
@@ -36,6 +26,21 @@ import com.finerioconnect.widget.remote.data.ItemDataBase;
 import com.finerioconnect.widget.remote.data.ResponseFinerioCredentials;
 import com.finerioconnect.widget.utils.AbstractFragment;
 import com.finerioconnect.widget.utils.EventFragment;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import org.jetbrains.annotations.NotNull;
+
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Objects;
+
 import static com.finerioconnect.widget.utils.Tools.customTextView;
 //import com.github.twocoffeesoneteam.glidetovectoryou.GlideToVectorYou;
 //import com.github.twocoffeesoneteam.glidetovectoryou.GlideToVectorYouListener;

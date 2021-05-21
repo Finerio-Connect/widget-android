@@ -41,7 +41,7 @@ public class ErrorFragment extends AbstractFragment implements View.OnClickListe
         TextView titleBack = itemView.findViewById(R.id.titleBack);
         titleBack.setOnClickListener(this);
         TextView tvMessageError = itemView.findViewById(R.id.tvMessageError);
-        tvMessageError.setText(mMessage);
+        tvMessageError.setText(getString(R.string.message_error, mMessage));
     }
 
     @Override

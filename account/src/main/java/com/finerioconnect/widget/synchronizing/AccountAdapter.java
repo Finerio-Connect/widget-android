@@ -7,10 +7,10 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.List;
-
 import com.finerioconnect.widget.R;
 import com.finerioconnect.widget.remote.data.Account;
+
+import java.util.List;
 
 public class AccountAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 

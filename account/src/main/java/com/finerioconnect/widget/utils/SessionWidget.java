@@ -1,7 +1,6 @@
 package com.finerioconnect.widget.utils;
 
 import com.finerioconnect.widget.remote.data.Bank;
-import com.finerioconnect.widget.remote.data.Field;
 
 import java.util.ArrayList;
 import java.util.List;

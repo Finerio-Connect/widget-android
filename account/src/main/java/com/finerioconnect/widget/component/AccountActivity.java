@@ -2,15 +2,12 @@ package com.finerioconnect.widget.component;
 
 import android.os.Bundle;
 
-import com.google.firebase.FirebaseApp;
-
 import com.finerioconnect.widget.R;
 import com.finerioconnect.widget.bank.BankFragment;
 import com.finerioconnect.widget.credentials.CredentialsFragment;
 import com.finerioconnect.widget.fragment.BondingFragment;
 import com.finerioconnect.widget.fragment.ErrorFragment;
 import com.finerioconnect.widget.fragment.ImplFragmentTransaction;
-import com.finerioconnect.widget.fragment.WelcomeFragment;
 import com.finerioconnect.widget.model.AccountWidget;
 import com.finerioconnect.widget.model.Singleton;
 import com.finerioconnect.widget.remote.data.Bank;
@@ -19,6 +16,9 @@ import com.finerioconnect.widget.utils.AbstractFragment;
 import com.finerioconnect.widget.utils.BaseActivityFragment;
 import com.finerioconnect.widget.utils.EventFragment;
 import com.finerioconnect.widget.utils.FragmentControllerDelegate;
+import com.google.firebase.FirebaseApp;
+
+import java.util.Objects;
 
 public class AccountActivity extends BaseActivityFragment implements ImplFragmentTransaction {
 
@@ -33,10 +33,19 @@ public class AccountActivity extends BaseActivityFragment implements ImplFragmen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
+        setTitle("Bancos");
         FirebaseApp.initializeApp(this);
         AccountWidget accountWidget = (AccountWidget) getIntent().getSerializableExtra("AccountWidget");
         Singleton.getInstance().setAccountWidget(accountWidget);
         loadFragment(mBankFragment, FragmentControllerDelegate.TRANSITION.FADE);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 
     @Override
@@ -56,12 +65,16 @@ public class AccountActivity extends BaseActivityFragment implements ImplFragmen
         if (currentFragment instanceof BankFragment){
             super.onBackPressed();
         }else if (currentFragment instanceof CredentialsFragment){
+            setTitle("Bancos");
             loadFragment(mBankFragment, FragmentControllerDelegate.TRANSITION.BACK);
         }else if (currentFragment instanceof BondingFragment){
+            setTitle("Bancos");
             loadFragment(mBankFragment, FragmentControllerDelegate.TRANSITION.BACK);
         }else if (currentFragment instanceof ErrorFragment){
+            setTitle("Bancos");
             loadFragment(mBankFragment, FragmentControllerDelegate.TRANSITION.BACK);
         }else if (currentFragment instanceof SynchronizingFragment){
+            setTitle("Bancos");
             loadFragment(mBankFragment, FragmentControllerDelegate.TRANSITION.BACK);
         }else{ super.onBackPressed(); }
     }
@@ -88,7 +101,7 @@ public class AccountActivity extends BaseActivityFragment implements ImplFragmen
                 break;
             case Bonding:
                 loadFragment(mBondingFragment);
-                setTitle("Mensage de Éxito");
+                setTitle("Mensaje de Éxito");
                 break;
             case Error:
                 loadFragment(mErrorFragment);

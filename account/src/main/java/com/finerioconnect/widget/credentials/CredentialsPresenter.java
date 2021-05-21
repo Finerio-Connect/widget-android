@@ -4,11 +4,21 @@ import android.content.Context;
 import android.util.Base64;
 import android.util.Log;
 
+import com.finerioconnect.widget.R;
+import com.finerioconnect.widget.model.AccountWidget;
+import com.finerioconnect.widget.model.Singleton;
+import com.finerioconnect.widget.remote.ApiClient;
+import com.finerioconnect.widget.remote.ApiService;
+import com.finerioconnect.widget.remote.ServiceUrl;
+import com.finerioconnect.widget.remote.data.Credentials;
 import com.finerioconnect.widget.remote.data.Error;
+import com.finerioconnect.widget.remote.data.FieldsMagicLink;
 import com.finerioconnect.widget.remote.data.ResponseErrors;
+import com.finerioconnect.widget.remote.data.ResponseFinerioCredentials;
 import com.finerioconnect.widget.utils.SessionFieldList;
 import com.finerioconnect.widget.utils.SessionWidget;
 import com.google.gson.Gson;
+
 import org.bouncycastle.asn1.x509.SubjectPublicKeyInfo;
 import org.bouncycastle.openssl.PEMParser;
 import org.bouncycastle.openssl.jcajce.JcaPEMKeyConverter;
@@ -24,15 +34,6 @@ import java.util.Objects;
 
 import javax.crypto.Cipher;
 
-import com.finerioconnect.widget.R;
-import com.finerioconnect.widget.model.AccountWidget;
-import com.finerioconnect.widget.model.Singleton;
-import com.finerioconnect.widget.remote.ApiClient;
-import com.finerioconnect.widget.remote.ApiService;
-import com.finerioconnect.widget.remote.ServiceUrl;
-import com.finerioconnect.widget.remote.data.Credentials;
-import com.finerioconnect.widget.remote.data.FieldsMagicLink;
-import com.finerioconnect.widget.remote.data.ResponseFinerioCredentials;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

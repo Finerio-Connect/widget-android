@@ -1,8 +1,8 @@
 package com.finerioconnect.widget.bank;
 
-import java.util.List;
-
 import com.finerioconnect.widget.remote.data.Bank;
+
+import java.util.List;
 
 public interface ImplBankView {
     void showBankList(List<Bank> bankList);
