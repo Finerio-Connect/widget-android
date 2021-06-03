@@ -1,12 +1,13 @@
 package com.finerioconnect.widget.synchronizing;
 
-import org.jetbrains.annotations.NotNull;
-
 import com.finerioconnect.widget.remote.ApiClient;
 import com.finerioconnect.widget.remote.ApiService;
 import com.finerioconnect.widget.remote.ServiceUrl;
 import com.finerioconnect.widget.remote.data.UserToken;
 import com.finerioconnect.widget.utils.ImplGenericResult;
+
+import org.jetbrains.annotations.NotNull;
+
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;

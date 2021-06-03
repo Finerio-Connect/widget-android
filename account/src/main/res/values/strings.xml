@@ -66,6 +66,6 @@
     <string name="constraintViolationList_rfc_message">El RFC que escribiste es incorrecto</string>
     <string name="constraintViolationList_password_message">La contraseña que escribiste es incorrecta</string>
     <string name="customer_not_found">ID de cliente no encontrado</string>
-
+    <string name="message_error">Lo sentimos, %s</string>
 
 </resources>

@@ -2,17 +2,19 @@ package com.finerioconnect.widget.bank;
 
 import android.content.Context;
 
-import org.jetbrains.annotations.NotNull;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import com.finerioconnect.widget.R;
 import com.finerioconnect.widget.remote.ApiClient;
 import com.finerioconnect.widget.remote.ApiService;
 import com.finerioconnect.widget.remote.ServiceUrl;
 import com.finerioconnect.widget.remote.data.Bank;
 import com.finerioconnect.widget.remote.data.BanksMagicLink;
+import com.finerioconnect.widget.utils.SessionWidget;
+
+import org.jetbrains.annotations.NotNull;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -31,30 +33,34 @@ public class BankPresenter implements ImplBankPresenter {
 
     @Override
     public void getBankList(){
-        mApiService.doGetBanks().enqueue(new Callback<BanksMagicLink>() {
-            @Override
-            public void onResponse(@NotNull Call<BanksMagicLink> call, @NotNull Response<BanksMagicLink> response) {
-                if (response.body() != null){
-                    List<Bank> bankList = new ArrayList<>();
+        if (SessionWidget.getBankList().isEmpty()){
+            mApiService.doGetBanks().enqueue(new Callback<BanksMagicLink>() {
+                @Override
+                public void onResponse(@NotNull Call<BanksMagicLink> call, @NotNull Response<BanksMagicLink> response) {
+                    if (response.body() != null){
+                        List<Bank> bankList = new ArrayList<>();
 
-                    for (Bank bank: response.body().getData()) {
-                        if (bank.getStatus().equals("ACTIVE") && bank.getStatus().equals("PARTIALLY_ACTIVE")){
-                            bankList.add(bank);
+                        for (Bank bank: response.body().getData()) {
+                            if (bank.getStatus().equals("ACTIVE") || bank.getStatus().equals("PARTIALLY_ACTIVE")){
+                                bankList.add(bank);
+                            }
                         }
+                        SessionWidget.setBankList( bankList );
+                        mImplBankView.showBankList(bankList);
+                    }else{
+                        onFailure(call, new Throwable(mContext.getString(R.string.text_error_server)));
                     }
-
-                    mImplBankView.showBankList(bankList);
-                }else{
-                    onFailure(call, new Throwable(mContext.getString(R.string.text_error_server)));
                 }
-            }
 
-            @Override
-            public void onFailure(@NotNull Call<BanksMagicLink> call, @NotNull Throwable t) {
-                call.cancel();
-                mImplBankView.showErrorMessage(t);
-            }
-        });
+                @Override
+                public void onFailure(@NotNull Call<BanksMagicLink> call, @NotNull Throwable t) {
+                    call.cancel();
+                    mImplBankView.showErrorMessage(t);
+                }
+            });
+        }else{
+            mImplBankView.showBankList(SessionWidget.getBankList());
+        }
     }
 
 }

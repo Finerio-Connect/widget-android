@@ -7,7 +7,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.airbnb.lottie.LottieAnimationView;
-
 import com.finerioconnect.widget.R;
 import com.finerioconnect.widget.remote.data.Account;
 

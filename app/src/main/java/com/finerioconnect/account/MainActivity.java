@@ -1,40 +1,35 @@
 package com.finerioconnect.account;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.finerioconnect.widget.component.AccountActivity;
 import com.finerioconnect.widget.model.AccountWidget;
 
 public class MainActivity extends AppCompatActivity {
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setup();
+    }
 
+    private void setup(){
         AccountWidget accountWidget = new AccountWidget();
         // Required attributes
-        accountWidget.setCompanyName("your_company");
-        accountWidget.setWidgetId("your_widget_id");
-        //Optional attributes
-        //accountWidget.setCustomerId(875L);
-        accountWidget.setCustomerName("customer_name");
-        accountWidget.setAutomaticFetching(true);
-        accountWidget.setState("your_state");
-        //url default Finerio Sandbox
-        accountWidget.setUrlServer("url_production");
-
+        accountWidget.setCompanyName("Finerio");
+        accountWidget.setWidgetId("pparKeszQYwBF64A8WsWab5VDnVdE8QDnVCp2pgVubJRxyNU46");
+        accountWidget.setCustomerName( "irving.arellano@finerio.mx" );
         Button btnAccountView = findViewById(R.id.btnAccountView);
         btnAccountView.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, AccountActivity.class);
             intent.putExtra("AccountWidget", accountWidget);
             startActivity(intent);
         });
-
     }
+
 }

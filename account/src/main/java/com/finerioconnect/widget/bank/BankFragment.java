@@ -12,13 +12,12 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.finerioconnect.widget.R;
-
-import java.util.List;
-
 import com.finerioconnect.widget.fragment.ImplFragmentTransaction;
 import com.finerioconnect.widget.remote.data.Bank;
 import com.finerioconnect.widget.utils.AbstractFragment;
 import com.finerioconnect.widget.utils.EventFragment;
+
+import java.util.List;
 
 public class BankFragment extends AbstractFragment implements ImplBankView, BanksClickListener {
 

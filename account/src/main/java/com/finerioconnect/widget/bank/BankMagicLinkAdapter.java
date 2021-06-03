@@ -8,10 +8,10 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.List;
-
 import com.finerioconnect.widget.R;
 import com.finerioconnect.widget.remote.data.Bank;
+
+import java.util.List;
 
 public class BankMagicLinkAdapter extends RecyclerView.Adapter<BankMagicLinkViewHolder> {
 

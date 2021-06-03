@@ -5,6 +5,7 @@ import com.finerioconnect.widget.remote.data.Credentials;
 import com.finerioconnect.widget.remote.data.FieldsMagicLink;
 import com.finerioconnect.widget.remote.data.ResponseFinerioCredentials;
 import com.finerioconnect.widget.remote.data.UserToken;
+
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
