@@ -16,21 +16,45 @@ Finerio Connect Android Widget for the API Finerio Connect 2.0 reduces friction 
 
 Add it in your root `build.gradle` at the end of repositories:
 
-```bash
-allprojects {
-   repositories {
-      ...
-      maven { url 'https://jitpack.io' }
-   }
+```gradle
+buildscript {
+    ext.kotlin_version = "1.5.30"
+    ...
+    dependencies {
+         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+         ...
+    }
 }
 ```
 
-Add the dependency
+Edit your app `build.gradle` and specify the dependencies:
 
 ```gradle
-dependencies {
-   implementation 'com.github.Finerio-Connect:widget-android:2.0.1'
+implementation 'com.finerioconnect.widget:widget-android:2.5.6'
+```
+
+Edit your app `settings.gradle` and specify:
+
+```
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        maven {
+            url "https://zendesk.jfrog.io/artifactory/repo"
+        }
+        maven {
+            url 'C:/Users/your_user_name/.m2/repository'
+        }
+        google()
+        mavenCentral()
+    }
 }
+```
+
+Edit your app `build.properties` and specify the properties:
+
+```
+android.enableJetifier=true
 ```
 
 ## ⚙️ Use
@@ -138,8 +162,11 @@ activity_main.xml
 Android Manifest - XML
 
 ```xml
+
+<uses-permission android:name="android.permission.INTERNET"/>
+
 <activity
-    android:name="com.finerioconnect.widget.core.component.AccountActivity"
+android:name="com.finerioconnect.widget.core.component.AccountActivity"
 />
 ```
 
@@ -167,14 +194,14 @@ Java Code :
 
 ```java
 CredentialsFragment credentialsFragment = new CredentialsFragment();
-credentialsFragment.setBank(BankObject);
+        credentialsFragment.setBank(BankObject);
 ```
 
 Kotlin Code :
 
 ```kotlin
 val credentialsFragment = CredentialsFragment()
-        credentialsFragment.setBank(BankObject)
+credentialsFragment.setBank(BankObject)
 ```
 
 #### Synchronizing fragment
@@ -183,8 +210,8 @@ Java Code :
 
 ```java
 SynchronizingFragment synchronizingFragment = new SynchronizingFragment();
-synchronizingFragment.setCredentialId("CredentialId");
-synchronizingFragment.setSynchronizingListener(this);
+        synchronizingFragment.setCredentialId("CredentialId");
+        synchronizingFragment.setSynchronizingListener(this);
 ```
 
 Kotlin Code :
@@ -247,157 +274,157 @@ public interface OnSynchronizingListener {
 
 ```xml
      // Tint color for the icon rounded by a circle.
-    <color name="circleIconTint">your_color</color>
+<color name="circleIconTint">your_color</color>
     // Background color for the circle that contains an icon.
-    <color name="circleIconBackground">your_color</color>
+<color name="circleIconBackground">your_color</color>
     // Background color for the buttons that performs a next or continue flow action.
-    <color name="buttonActiveBackground">your_color</color>
+<color name="buttonActiveBackground">your_color</color>
     // Tint color for the title of buttons that performs a next or continue flow action.
-    <color name="buttonActiveText">your_color</color>
+<color name="buttonActiveText">your_color</color>
     // Background color for the buttons that performs an exit or stops the flow action.
-    <color name="buttonPassiveBackground">your_color</color>
+<color name="buttonPassiveBackground">your_color</color>
     // Tint color for the title of buttons that performs an exit or stops the flow action.
-    <color name="buttonPassiveText">your_color</color>
+<color name="buttonPassiveText">your_color</color>
     // Background color used in all the views
-    <color name="backgroundView">your_color</color>
+<color name="backgroundView">your_color</color>
     // Tint color commonly used for the paragraph texts or normal texts.
-    <color name="regularSizedText">your_color</color>
+<color name="regularSizedText">your_color</color>
     // Tint color used in phrases or titles to distinguish from others descriptions.
-    <color name="mediumSizedText">your_color</color>
+<color name="mediumSizedText">your_color</color>
     // Tint color for the phrases or paragraphs with a thin text
-    <color name="liteText">your_color</color>
+<color name="liteText">your_color</color>
     // Tint color used in linked texts that redirects to a web site or a view within the flow.
-    <color name="linkedText">your_color</color>
+<color name="linkedText">your_color</color>
     // Background color used in the edittext.
-    <color name="fieldsBackground">your_color</color>
+<color name="fieldsBackground">your_color</color>
     // Border tint  color used in the edittext.
-    <color name="fieldsBorder">your_color</color>
+<color name="fieldsBorder">your_color</color>
     // Tint color used in the placeholders of the edittext.
-    <color name="fieldsPlaceholder">your_color</color>
+<color name="fieldsPlaceholder">your_color</color>
     // Tint color used in the right icons of the edittext.
-    <color name="fieldsRightIcon">your_color</color>
+<color name="fieldsRightIcon">your_color</color>
     // Background color for segmented controls.
-    <color name="segmentedControlBackground">your_color</color>
+<color name="segmentedControlBackground">your_color</color>
     // Background color for the active part of segmented controls.
-    <color name="segmentedControlActiveItem">your_color</color>
+<color name="segmentedControlActiveItem">your_color</color>
     // Tint color for the text in the dropdown menu.
-    <color name="dropDownMenuTint">your_color</color>
+<color name="dropDownMenuTint">your_color</color>
     // Border color of the banner component.
-    <color name="bannerBorder">your_color</color>
+<color name="bannerBorder">your_color</color>
     // Tint color for the success icon shown after a correct synchronization process.
-    <color name="successIconTint">your_color</color>
+<color name="successIconTint">your_color</color>
     // Tint color for the failure icon shown after a failed synchronization process.
-    <color name="failureIconTint">your_color</color>
+<color name="failureIconTint">your_color</color>
     // Tint color used in the cell separators of list.
-    <color name="cellSeparator">your_color</color>
+<color name="cellSeparator">your_color</color>
     // Tint color used in the icons of disclosure indicators within the cells of list.
-    <color name="cellDisclosureIndicator">your_color</color>
+<color name="cellDisclosureIndicator">your_color</color>
     // Tint color used in the current dot of the page control of onboarding components.
-    <color name="pageDotActive">your_color</color>
+<color name="pageDotActive">your_color</color>
     // Tint color used in the unselected dots of the page control of onboarding components.
-    <color name="pageDotInactive">your_color</color>
+<color name="pageDotInactive">your_color</color>
     // Background color used in toolbar
-    <color name="toolbarBg">your_color</color>
+<color name="toolbarBg">your_color</color>
 
     // Background color used in fab
-    <color name="fcZendeskIconBackground">your_color</color>
-    <color name="fcZendeskIconTint">your_color</color>
+<color name="fcZendeskIconBackground">your_color</color>
+<color name="fcZendeskIconTint">your_color</color>
 ```
 
 #### Dark mode:
 
 ```xml
     // Tint color for the icon rounded by a circle.
-    <color name="circleIconTintDark">your_color</color>
+<color name="circleIconTintDark">your_color</color>
     // Background color for the circle that contains an icon.
-    <color name="circleIconBackgroundDark">your_color</color>
+<color name="circleIconBackgroundDark">your_color</color>
     // Background color for the buttons that performs a next or continue flow action.
-    <color name="buttonActiveBackgroundDark">your_color</color>
+<color name="buttonActiveBackgroundDark">your_color</color>
     // Tint color for the title of buttons that performs a next or continue flow action.
-    <color name="buttonActiveText">your_color</color>
+<color name="buttonActiveText">your_color</color>
     // Background color for the buttons that performs an exit or stops the flow action.
-    <color name="buttonPassiveBackgroundDark">your_color</color>
+<color name="buttonPassiveBackgroundDark">your_color</color>
     // Tint color for the title of buttons that performs an exit or stops the flow action.
-    <color name="buttonPassiveTextDark">your_color</color>
+<color name="buttonPassiveTextDark">your_color</color>
     // Background color used in all the views
-    <color name="backgroundViewDark">your_color</color>
+<color name="backgroundViewDark">your_color</color>
     // Tint color commonly used for the paragraph texts or normal texts.
-    <color name="regularSizedTextDark">your_color</color>
+<color name="regularSizedTextDark">your_color</color>
     // Tint color used in phrases or titles to distinguish from others descriptions.
-    <color name="mediumSizedTextDark">your_color</color>
+<color name="mediumSizedTextDark">your_color</color>
     // Tint color for the phrases or paragraphs with a thin text
-    <color name="liteTextDark">your_color</color>
+<color name="liteTextDark">your_color</color>
     // Tint color used in linked texts that redirects to a web site or a view within the flow.
-    <color name="linkedTextDark">your_color</color>
+<color name="linkedTextDark">your_color</color>
     // Background color used in the edittext.
-    <color name="fieldsBackgroundDark">your_color</color>
+<color name="fieldsBackgroundDark">your_color</color>
     // Border tint  color used in the edittext.
-    <color name="fieldsBorderDark">your_color</color>
+<color name="fieldsBorderDark">your_color</color>
     // Tint color used in the placeholders of the edittext.
-    <color name="fieldsPlaceholderDark">your_color</color>
+<color name="fieldsPlaceholderDark">your_color</color>
     // Tint color used in the right icons of the edittext.
-    <color name="fieldsRightIconDark">your_color</color>
+<color name="fieldsRightIconDark">your_color</color>
     // Background color for segmented controls.
-    <color name="segmentedControlBackgroundDark">your_color</color>
+<color name="segmentedControlBackgroundDark">your_color</color>
     // Background color for the active part of segmented controls.
-    <color name="segmentedControlActiveItemDark">your_color</color>
+<color name="segmentedControlActiveItemDark">your_color</color>
     // Tint color for the text in the dropdown menu.
-    <color name="dropDownMenuTintDark">your_color</color>
+<color name="dropDownMenuTintDark">your_color</color>
     // Border color of the banner component.
-    <color name="bannerBorderDark">your_color</color>
+<color name="bannerBorderDark">your_color</color>
     // Tint color for the success icon shown after a correct synchronization process.
-    <color name="successIconTintDark">your_color</color>
+<color name="successIconTintDark">your_color</color>
     // Tint color for the failure icon shown after a failed synchronization process.
-    <color name="failureIconTintDark">your_color</color>
+<color name="failureIconTintDark">your_color</color>
     // Tint color used in the cell separators of list.
-    <color name="cellSeparatorDark">your_color</color>
+<color name="cellSeparatorDark">your_color</color>
     // Tint color used in the icons of disclosure indicators within the cells of list.
-    <color name="cellDisclosureIndicatorDark">your_color</color>
+<color name="cellDisclosureIndicatorDark">your_color</color>
     // Tint color used in the current dot of the page control of onboarding components.
-    <color name="pageDotActiveDark">your_color</color>
+<color name="pageDotActiveDark">your_color</color>
     // Tint color used in the unselected dots of the page control of onboarding components.
-    <color name="pageDotInactiveDark">your_color</color>
+<color name="pageDotInactiveDark">your_color</color>
     // Background color used in toolbar
-    <color name="toolbarBgDark">your_color</color>
-    
-        // Background color used in fab
-    <color name="fcZendeskIconBackgroundDark">your_color</color>
-    <color name="fcZendeskIconTintDark">your_color</color>
+<color name="toolbarBgDark">your_color</color>
+
+    // Background color used in fab
+<color name="fcZendeskIconBackgroundDark">your_color</color>
+<color name="fcZendeskIconTintDark">your_color</color>
 ```
 
 ### 📝 Text Customization
 
 ```xml
 <!-- Custom strings banks view -->
- <string name="fcBanksHeaderTitle">your_text</string>
- <string name="fcBanksHeaderSubtitle">your_text</string>
- <string name="fcSelectCountryLabel">your_text</string>
- <string name="fcPersonalBankType">your_text</string>
- <string name="fcBusinessBankType">your_text</string>
- <string name="fcFiscalBankType">your_text</string>
- <string name="fcTitleWithoutBanks">your_text</string>
+<string name="fcBanksHeaderTitle">your_text</string>
+<string name="fcBanksHeaderSubtitle">your_text</string>
+<string name="fcSelectCountryLabel">your_text</string>
+<string name="fcPersonalBankType">your_text</string>
+<string name="fcBusinessBankType">your_text</string>
+<string name="fcFiscalBankType">your_text</string>
+<string name="fcTitleWithoutBanks">your_text</string>
 
- <!-- Custom strings Credentials view -->
- <string name="fcCredentialsHeaderTitle">your_text</string>
- <string name="fcCredentialsHeaderSubtitle">your_text</string>
- <string name="fcCredentialsInfo">your_text</string>
- <string name="fcCredentialsDisclaimer">your_text</string>
- <string name="fcTermsAndConditions">your_text</string>
- <string name="fcSubmitLabel">your_text</string>
- <string name="fcMustAcceptTerms">your_text</string>
+    <!-- Custom strings Credentials view -->
+<string name="fcCredentialsHeaderTitle">your_text</string>
+<string name="fcCredentialsHeaderSubtitle">your_text</string>
+<string name="fcCredentialsInfo">your_text</string>
+<string name="fcCredentialsDisclaimer">your_text</string>
+<string name="fcTermsAndConditions">your_text</string>
+<string name="fcSubmitLabel">your_text</string>
+<string name="fcMustAcceptTerms">your_text</string>
 
- <!-- Custom strings Synchronizing view -->
- <string name="fcSyncHeaderTitle">your_text</string>
- <string name="fcSyncHeaderSubtitle">your_text</string>
- <string name="fcEncryptingData">your_textyour_text</string>
+    <!-- Custom strings Synchronizing view -->
+<string name="fcSyncHeaderTitle">your_text</string>
+<string name="fcSyncHeaderSubtitle">your_text</string>
+<string name="fcEncryptingData">your_textyour_text</string>
 
- <!-- Custom strings Synchronizing view -->
- <string name="fcBondingHeaderTitle">¡Gracias!</string>
- <string name="fcBondingHeaderTitleSuccess">your_text</string>
- <string name="fcBondingHeaderTitleFail">your_text</string>
- <string name="fcBondingDescriptionSuccess">your_text</string>
- <string name="fcBondingDescriptionFail">your_text</string>
- <string name="fcAccept">your_text</string>
+    <!-- Custom strings Synchronizing view -->
+<string name="fcBondingHeaderTitle">¡Gracias!</string>
+<string name="fcBondingHeaderTitleSuccess">your_text</string>
+<string name="fcBondingHeaderTitleFail">your_text</string>
+<string name="fcBondingDescriptionSuccess">your_text</string>
+<string name="fcBondingDescriptionFail">your_text</string>
+<string name="fcAccept">your_text</string>
 ```
 
 ### 🔤 Fonts Customization
@@ -406,10 +433,10 @@ Default font: Poppins
 
 ```xml
     <style name="AppTheme" >
- <!-- Customize Font Customer. -->
- <item name="fontFamily">@font/your_font</item>
- <item name="android:fontFamily">@font/your_font</item>
- </style>
+    <!-- Customize Font Customer. -->
+    <item name="fontFamily">@font/your_font</item>
+    <item name="android:fontFamily">@font/your_font</item>
+</style>
 ```
 
 ## License
