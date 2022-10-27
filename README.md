@@ -1,6 +1,8 @@
 # Finerio Connect Android Widget
 
-[![](https://jitpack.io/v/Finerio-Connect/widget-android.svg)](https://jitpack.io/#Finerio-Connect/widget-android)
+
+
+<a href="https://github.com/Finerio-Connect/widget-android/releases"><img src="https://img.shields.io/github/v/release/Finerio-Connect/widget-android" /></a>
 ![Language](https://img.shields.io/badge/Language-Java-orange.svg)
 ![Language](https://img.shields.io/badge/Language-Kotlin-purple.svg)
 
