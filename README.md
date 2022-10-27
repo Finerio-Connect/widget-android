@@ -12,9 +12,24 @@ Finerio Connect Android Widget for the API Finerio Connect 2.0 reduces friction 
 
 - You must have an active account with Finerio Connect 2.0
 
+### Installation
+
+1. Download the [latest Widget version](https://github.com/Finerio-Connect/widget-android/releases) zip file.
+2. Unzip the com folder (containing the Widget local maven dependencies) and put it in ~/.m2/repository/.
+3. Add mavenLocal() as repository in your root level build.gradle file.
+
+```gradle
+    allprojects {
+        repositories {
+            mavenLocal()
+            // Rest of the repositories
+        }
+    }
+```
+
 ### Using Gradle
 
-Add it in your root `build.gradle` at the end of repositories:
+4. Add it in your root `build.gradle` at the end of repositories:
 
 ```gradle
 buildscript {
@@ -27,13 +42,13 @@ buildscript {
 }
 ```
 
-Edit your app `build.gradle` and specify the dependencies:
+5. Edit your app `build.gradle` and specify the dependencies:
 
 ```gradle
 implementation 'com.finerioconnect.widget:widget-android:2.5.6'
 ```
 
-Edit your app `settings.gradle` and specify:
+6. Edit your app `settings.gradle` and specify:
 
 ```
 dependencyResolutionManagement {
@@ -51,10 +66,18 @@ dependencyResolutionManagement {
 }
 ```
 
-Edit your app `build.properties` and specify the properties:
+7. Edit your app `build.properties` and specify the properties:
 
 ```
 android.enableJetifier=true
+```
+
+8. Set the java compiler to Java 8 or higher. In your app-level build.gradle:
+```
+    compileOptions {
+       sourceCompatibility = JavaVersion.VERSION_1_8
+       targetCompatibility = JavaVersion.VERSION_1_8
+    }
 ```
 
 ## ⚙️ Use
@@ -63,75 +86,75 @@ Java Code :
 
 ```java
     FinerioConnectWidget finerioConnectWidget = FinerioConnectWidget.getShared();
-    // Required attributes
-    finerioConnectWidget.setCompanyName("your_company");
-    finerioConnectWidget.setWidgetId("your_widget_id");
-    //Optional attributes
-    finerioConnectWidget.setCustomerId(875L);
-    finerioConnectWidget.setCustomerName("customer_name");
-    //Environment
-    finerioConnectWidget.setEnvironment(Enums.Environment.Production);
-    //Optional automatic fetching
-    finerioConnectWidget.setAutomaticFetching(true);
-    //Optional state
-    finerioConnectWidget.setState("your_state");
-    //Optional country code for bank search, MX is default value
-    finerioConnectWidget.setCountryCode("CO");
-    //Optional param to show or hide country list
-    finerioConnectWidget.setShowCountryOptions(true);
-    //Optional show or hide bank types
-    finerioConnectWidget.setShowBankTypeOptions(true);
-    //Optional bank types, PERSONAL is default value. (PERSONAL, BUSINESS, FISCAL)
-    finerioConnectWidget.setBankType(Enums.BankType.PERSONAL);
-    //Optional theme mode, LIGHT is default value.(LIGHT, DARK, AUTOMATIC)
-    finerioConnectWidget.setDarkMode(DarkMode.LIGHT);
-    //Optional show or hide chat option
-    finerioConnectWidget.setShowChat(true);
-    //Optional show or hide onboarding screen
-    finerioConnectWidget.setShowOnboarding(true);
-    //Optional configure custom onboarding screens
-    finerioConnectWidget.setOnboarding(custom_onboarding_object);
-    //Required method to initial main components
-    finerioConnectWidget.config(this);
+        // Required attributes
+        finerioConnectWidget.setCompanyName("your_company");
+        finerioConnectWidget.setWidgetId("your_widget_id");
+        //Optional attributes
+        finerioConnectWidget.setCustomerId(875L);
+        finerioConnectWidget.setCustomerName("customer_name");
+        //Environment
+        finerioConnectWidget.setEnvironment(Enums.Environment.Production);
+        //Optional automatic fetching
+        finerioConnectWidget.setAutomaticFetching(true);
+        //Optional state
+        finerioConnectWidget.setState("your_state");
+        //Optional country code for bank search, MX is default value
+        finerioConnectWidget.setCountryCode("CO");
+        //Optional param to show or hide country list
+        finerioConnectWidget.setShowCountryOptions(true);
+        //Optional show or hide bank types
+        finerioConnectWidget.setShowBankTypeOptions(true);
+        //Optional bank types, PERSONAL is default value. (PERSONAL, BUSINESS, FISCAL)
+        finerioConnectWidget.setBankType(Enums.BankType.PERSONAL);
+        //Optional theme mode, LIGHT is default value.(LIGHT, DARK, AUTOMATIC)
+        finerioConnectWidget.setDarkMode(DarkMode.LIGHT);
+        //Optional show or hide chat option
+        finerioConnectWidget.setShowChat(true);
+        //Optional show or hide onboarding screen
+        finerioConnectWidget.setShowOnboarding(true);
+        //Optional configure custom onboarding screens
+        finerioConnectWidget.setOnboarding(custom_onboarding_object);
+        //Required method to initial main components
+        finerioConnectWidget.config(this);
 
-    //Optional listener to get process synchronizing data from activity
-    AccountActivity.setSynchronizingListener(credentialAccount -> {});
+        //Optional listener to get process synchronizing data from activity
+        AccountActivity.setSynchronizingListener(credentialAccount -> {});
 
-    Button btnAccountView = findViewById(R.id.btnAccountView);
-    btnAccountView.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            Intent intent = new Intent(MainActivity.this, AccountActivity.class);
-            startActivity(intent);
- }
-    });
+        Button btnAccountView = findViewById(R.id.btnAccountView);
+        btnAccountView.setOnClickListener(new View.OnClickListener() {
+@Override
+public void onClick(View view) {
+        Intent intent = new Intent(MainActivity.this, AccountActivity.class);
+        startActivity(intent);
+        }
+        });
 ```
 
 Kotlin Code :
 
 ```kotlin
     val finerioConnectWidget = FinerioConnectWidget.getShared()
-    // Required attributes
-    finerioConnectWidget.companyName = "your_company"
-    finerioConnectWidget.widgetId = "your_widget_id"
+// Required attributes
+finerioConnectWidget.companyName = "your_company"
+finerioConnectWidget.widgetId = "your_widget_id"
 
-    //Optional attributes
-    finerioConnectWidget.environment = Enums.Environment.Sandbox
-    finerioConnectWidget.customerName = "your_customer_name"
-    finerioConnectWidget.countryCode = "CO"
-    finerioConnectWidget.setAutomaticFetching = true 
-    finerioConnectWidget.setState = "your_state"
-    finerioConnectWidget.showCountryOptions = true
-    finerioConnectWidget.showBankTypeOptions = true
-    finerioConnectWidget.bankType = Enums.BankType.PERSONAL
-    finerioConnectWidget.darkMode = DarkMode.LIGHT
-    finerioConnectWidget.config(this)
+//Optional attributes
+finerioConnectWidget.environment = Enums.Environment.Sandbox
+finerioConnectWidget.customerName = "your_customer_name"
+finerioConnectWidget.countryCode = "CO"
+finerioConnectWidget.setAutomaticFetching = true
+finerioConnectWidget.setState = "your_state"
+finerioConnectWidget.showCountryOptions = true
+finerioConnectWidget.showBankTypeOptions = true
+finerioConnectWidget.bankType = Enums.BankType.PERSONAL
+finerioConnectWidget.darkMode = DarkMode.LIGHT
+finerioConnectWidget.config(this)
 
-    findViewById<Button>(R.id.btnAccountView)
-        .setOnClickListener {
-          val intent = Intent(this@MainActivity, AccountActivity::class.java)
-          startActivity(intent)
-  }
+findViewById<Button>(R.id.btnAccountView)
+    .setOnClickListener {
+        val intent = Intent(this@MainActivity, AccountActivity::class.java)
+        startActivity(intent)
+    }
 ```
 
 activity_main.xml
@@ -144,7 +167,7 @@ activity_main.xml
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
- <Button
+    <Button
         android:id="@+id/btnAccountView"
         style="@style/buttonAccount"
         android:text="@string/text_btn_add_accounts"
