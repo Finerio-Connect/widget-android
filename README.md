@@ -463,5 +463,3 @@ Default font: Poppins
     <item name="android:fontFamily">@font/your_font</item>
 </style>
 ```
-
-## License
